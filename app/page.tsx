@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import ProjectCard from "./components/ProjectCard";
+import TechStack from "./components/TechStack"; // New import
 import Footer from "./components/Footer";
 import { projects } from "../data/projects";
 
@@ -17,6 +18,9 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* New TechStack section */}
+      <TechStack />
       
       <Footer />
     </main>
