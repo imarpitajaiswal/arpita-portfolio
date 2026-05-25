@@ -5,7 +5,13 @@ export const projects = [
     title: "DocuMind (RAG Assistant)",
     description: "An LLM-powered document query system using vector databases to eliminate hallucinations in document analysis.",
     tags: ["Python", "LangChain", "ChromaDB", "FastAPI"],
-    link: "https://github.com/imarpitajaiswal/documind",
+    link: "https://github.com/imarpitajaiswal/docuMind",
+  },
+  {
+    title: "Expense Tracker",
+    description: "A robust financial management tool designed to track income and expenditures with real-time data visualization.",
+    tags: ["React", "JavaScript", "Context API", "CSS"],
+    link: "https://github.com/imarpitajaiswal/expense-tracker-program",
   },
   {
     title: "Portfolio Website (Next.js)",
