@@ -1,19 +1,24 @@
+"use client"; // Required for interactivity
+import { useState, useEffect } from 'react';
+
 export default function Hero() {
+  const roles = ["AI/ML Engineer", "Software Developer", "Problem Solver"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % roles.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="flex flex-col items-center justify-center min-h-[60vh] text-center px-4">
-      {/* Use text-slate-900 for headings for better contrast */}
-      <h1 className="text-5xl font-bold mb-4 text-slate-900">Arpita Jaiswal</h1>
-      <h2 className="text-2xl text-purple-600 mb-6 font-semibold">AI/ML Engineer & Software Developer</h2>
-      
-      {/* Use text-slate-600 for body text */}
-      <p className="max-w-2xl text-slate-600 mb-8 text-lg">
-        Bridging the gap between academic research and production-ready enterprise applications.
-      </p>
-      
-      <div className="flex gap-4">
-        <a href="/resume.pdf" className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition">Download Resume</a>
-        <a href="https://github.com/imarpitajaiswal" className="border border-purple-600 text-purple-600 px-6 py-2 rounded-lg hover:bg-purple-50 transition">GitHub</a>
-      </div>
+    <section className="flex flex-col items-center justify-center min-h-[50vh] text-center">
+      <h1 className="text-6xl font-bold mb-4">Hi, I'm Arpita Jaiswal</h1>
+      <h2 className="text-3xl text-purple-600 mb-6 font-mono">
+        {roles[index]}
+      </h2>
+      {/* ... rest of your hero content */}
     </section>
   );
 }
