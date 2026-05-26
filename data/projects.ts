@@ -1,22 +1,17 @@
-// data/projects.ts
-
 export const projects = [
   {
     title: "DocuMind (RAG Assistant)",
-    description: "An LLM-powered document query system using vector databases to eliminate hallucinations in document analysis.",
-    tags: ["Python", "LangChain", "ChromaDB", "FastAPI"],
-    link: "https://github.com/imarpitajaiswal/docuMind",
+    desc: "S: High hallucination rates in enterprise docs. T: Build accurate query system. A: RAG + ChromaDB. R: 30% speed boost.",
+    color: "accent-1"
   },
   {
     title: "Expense Tracker",
-    description: "A robust financial management tool designed to track income and expenditures with real-time data visualization.",
-    tags: ["React", "JavaScript", "Context API", "CSS"],
-    link: "https://github.com/imarpitajaiswal/expense-tracker-program",
+    desc: "S: Manual financial tracking. T: Automate data visualization. A: React Context API. R: Improved user saving patterns.",
+    color: "accent-2"
   },
   {
-    title: "Portfolio Website (Next.js)",
-    description: "A high-performance, modular portfolio built with Next.js, Tailwind CSS, and TypeScript, optimized for speed and SEO.",
-    tags: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
-    link: "https://github.com/imarpitajaiswal/arpita-portfolio",
+    title: "Portfolio V2",
+    desc: "S: Outdated personal branding. T: Design high-end portfolio. A: Next.js + Tailwind. R: Professional agency-grade UX.",
+    color: "accent-3"
   }
 ];
