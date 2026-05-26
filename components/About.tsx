@@ -23,11 +23,11 @@ export default function About() {
             </h2>
           </div>
           <h3 className="text-3xl font-semibold text-white tracking-tight mt-2">
-            Building systems that <span className="text-gray-500 italic">think</span> and scale.
+            Building systems that <span className="text-gray-500 italic">reason</span> and scale.
           </h3>
         </motion.div>
 
-        {/* Right Column: Authoritative Prose */}
+        {/* Right Column: Authoritative Prose & Impact */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,14 +36,29 @@ export default function About() {
           className="md:w-2/3 max-w-2xl font-body space-y-8"
         >
           <p className="text-lg md:text-xl leading-relaxed text-gray-400">
-            I am an <strong className="text-gray-200 font-medium">AI Engineer and Full Stack Developer</strong> obsessed with building intelligent systems that eliminate friction. With a foundation built through a Master of Computer Applications, my expertise lies in bridging the gap between cutting-edge LLMs and highly scalable web architectures.
+            I am an <strong className="text-gray-200 font-medium">AI Engineer and Full Stack Developer</strong> with a Master of Computer Applications. I specialize in bridging the gap between foundational LLM research and production-grade web architectures. 
           </p>
 
-          <p className="text-lg md:text-xl leading-relaxed text-gray-400">
-            Whether I am architecting hallucination-free <strong className="text-gray-200 font-medium">RAG pipelines</strong>, deploying autonomous AI agents, or building high-performance financial trackers, I don't just write code—I engineer solutions that adapt, self-correct, and drive measurable business impact.
-          </p>
+          <div className="space-y-4">
+            <p className="text-lg md:text-xl leading-relaxed text-gray-400">My core focus areas include:</p>
+            <ul className="space-y-3 text-gray-300">
+              <li className="flex items-start gap-3">
+                <span className="text-gray-500 mt-1">▹</span>
+                <span><strong className="text-white">Agentic Workflows:</strong> Orchestrating multi-agent systems for autonomous task execution and complex reasoning.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-gray-500 mt-1">▹</span>
+                <span><strong className="text-white">RAG Infrastructure:</strong> Designing low-latency retrieval systems utilizing advanced vector embeddings to guarantee zero-hallucination outputs.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-gray-500 mt-1">▹</span>
+                <span><strong className="text-white">Scalable Full Stack:</strong> Building high-throughput Node.js/Next.js backends capable of processing complex data at scale.</span>
+              </li>
+            </ul>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 pt-4 border-t border-white/5">
+          {/* Hard Metrics */}
+          <div className="flex flex-col sm:flex-row gap-6 pt-6 border-t border-white/5">
              <div className="flex flex-col">
                 <span className="text-3xl font-semibold text-white tracking-tight">500+</span>
                 <span className="text-sm font-mono text-gray-500 uppercase tracking-wider mt-1">Tx/sec Processed</span>
