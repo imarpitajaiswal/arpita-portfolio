@@ -9,23 +9,23 @@ const projects = [
     description: "An LLM-powered document query system utilizing advanced vector databases to strictly eliminate hallucinations and ensure precise document analysis.",
     tech: ["Python", "LangChain", "LLMs", "Vector DB"],
     github: "https://github.com/imarpitajaiswal/DocuMind",
-    live: "#",
+    live: "https://github.com/imarpitajaiswal/docuMind",
     color: "primary"
   },
   {
-    title: "SkillMatch-AI",
+    title: "SkillMatcher-AI",
     description: "A sophisticated resume analyzer utilizing TF-IDF and Cosine Similarity algorithms to optimize candidate alignment with specific job descriptions.",
     tech: ["Machine Learning", "NLP", "Python", "Scikit-Learn"],
-    github: "https://github.com/imarpitajaiswal/SkillMatch-AI",
-    live: "#",
+    github: "https://github.com/imarpitajaiswal/SkillMatcher-AI",
+    live: "https://github.com/imarpitajaiswal/Skill-Matcher-AI",
     color: "secondary"
   },
   {
     title: "Smart-Expense-Tracker",
     description: "A performance-optimized financial utility capable of processing 500+ monthly transactions while maintaining 99% data integrity and visualization.",
     tech: ["Next.js", "React", "Data Processing", "Node.js"],
-    github: "https://github.com/imarpitajaiswal/Smart-Expense-Tracker",
-    live: "#",
+    github: "https://github.com/imarpitajaiswal/Expense-Tracker",
+    live: "https://github.com/imarpitajaiswal/Expense-Tracker",
     color: "primary"
   }
 ];

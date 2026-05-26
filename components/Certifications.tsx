@@ -8,28 +8,28 @@ const certificates = [
     title: "Discovering the autonomous enterprise",
     issuer: "SAP Learning",
     date: "May 2026",
-    link: "www.linkedin.com/in/imarpitajaiswal",
+    link: "https://www.linkedin.com/in/imarpitajaiswal",
     color: "primary"
   },
   {
     title: "Advanced Machine Learning Specialization",
     issuer: "Amity University",
     date: "2025",
-    link: "www.linkedin.com/in/imarpitajaiswal",
+    link: "https://www.linkedin.com/in/imarpitajaiswal",
     color: "secondary"
   },
   {
     title: "Agentic AI Foundations",
     issuer: "Saumya Singh Academy",
     date: "2024",
-    link: "www.linkedin.com/in/imarpitajaiswal",
+    link: "https://www.linkedin.com/in/imarpitajaiswal",
     color: "primary"
   },
   {
     title: "Skill India Quiz Challenge Winner",
     issuer: "Ministry of Skill Development & Entrepreneurship",
     date: "2022",
-    link: "www.linkedin.com/in/imarpitajaiswal",
+    link: "https://www.linkedin.com/in/imarpitajaiswal",
     color: "secondary"
   }
 ];
