@@ -16,7 +16,7 @@ const projects = [
     title: "SkillMatcher-AI",
     description: "A sophisticated resume analyzer utilizing TF-IDF and Cosine Similarity algorithms to optimize candidate alignment with specific job descriptions.",
     tech: ["Machine Learning", "NLP", "Python", "Scikit-Learn"],
-    github: "https://github.com/imarpitajaiswal/SkillMatcher-AI",
+    github: "https://github.com/imarpitajaiswal/Skill-Matcher-AI",
     live: "https://github.com/imarpitajaiswal/Skill-Matcher-AI",
     color: "secondary"
   },
