@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
+import Insights from "../components/Insights";
 import Certifications from "../components/Certifications";
 import Chatbot from "../components/Chatbot";
 import Timeline from "../components/Timeline";
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
+      <Insights />
       <Certifications />
       <Chatbot />
       <Timeline />
