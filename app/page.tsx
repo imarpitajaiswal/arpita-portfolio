@@ -3,6 +3,7 @@ import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Certifications from "../components/Certifications";
+import Chatbot from "../components/Chatbot";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Certifications />
+      <Chatbot />
     </div>
   );
 }
