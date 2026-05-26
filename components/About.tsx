@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function About() {
   return (
-    <section id="about" className="relative w-full max-w-7xl mx-auto px-6 md:px-12 py-24 min-h-screen flex items-center justify-center">
+    <section id="about" className="relative w-full max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20 flex items-center justify-center">
       
       {/* Futuristic Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] -z-10" />
@@ -29,15 +29,12 @@ export default function About() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative rounded-2xl overflow-hidden bg-glass-bg backdrop-blur-xl border border-glass-border shadow-glass hover:border-primary/30 transition-colors duration-500"
         >
-          {/* Mac/Terminal Header UI */}
+          {/* Mac/Terminal Header UI - Clean Version */}
           <div className="flex items-center px-6 py-4 bg-black/60 border-b border-white/5">
             <div className="flex space-x-2">
               <div className="w-3 h-3 rounded-full bg-red-500/80" />
               <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
               <div className="w-3 h-3 rounded-full bg-green-500/80" />
-            </div>
-            <div className="mx-auto text-gray-400 font-heading text-xs tracking-[0.2em] uppercase">
-              guest@arpita-ai: ~/about-me
             </div>
           </div>
 

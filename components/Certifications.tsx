@@ -1,122 +1,69 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useRef, useEffect, useState } from 'react';
-import { FaCertificate, FaExternalLinkAlt } from 'react-icons/fa';
 
-const certificates = [
-  {
-    title: "AWS Certified Machine Learning – Specialty",
-    issuer: "Amazon Web Services",
-    date: "Dec 2025",
-    link: "#",
-    color: "primary"
-  },
-  {
-    title: "Agentic AI & Advanced LLM Systems",
-    issuer: "DeepLearning.AI",
-    date: "Oct 2025",
-    link: "#",
-    color: "secondary"
-  },
-  {
-    title: "Full Stack Engineer Path",
-    issuer: "Codecademy",
-    date: "Aug 2024",
-    link: "#",
-    color: "primary"
-  },
-  {
-    title: "SAP Autonomous Enterprise Discoverer",
-    issuer: "SAP Learning",
-    date: "May 2026",
-    link: "#",
-    color: "secondary"
-  }
-];
-
-export default function Certifications() {
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    if (carouselRef.current) {
-      setWidth(carouselRef.current.scrollWidth - carouselRef.current.offsetWidth);
-    }
-  }, []);
-
+export default function About() {
   return (
-    <section id="certifications" className="relative w-full max-w-7xl mx-auto px-6 md:px-12 py-24 min-h-[70vh] overflow-hidden">
+    <section id="about" className="relative w-full max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20 flex items-center justify-center">
       
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-16 space-y-4"
-      >
-        <h2 className="font-heading text-secondary text-sm md:text-lg font-medium tracking-widest uppercase">
-          // Verified Credentials
-        </h2>
-        <h3 className="font-heading text-4xl md:text-5xl font-bold text-white">
-          Professional <span className="text-primary-glow">Certifications</span>
-        </h3>
-      </motion.div>
+      {/* Futuristic Background Grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] -z-10" />
 
-      {/* Draggable Carousel */}
-      <motion.div ref={carouselRef} className="cursor-grab active:cursor-grabbing overflow-hidden">
-        <motion.div 
-          drag="x" 
-          dragConstraints={{ right: 0, left: -width }} 
-          className="flex gap-6 md:gap-8"
+      {/* Floating Neon Dots */}
+      <motion.div 
+        animate={{ y: [0, -30, 0], opacity: [0.3, 0.8, 0.3] }} 
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} 
+        className="absolute top-1/4 left-10 w-2 h-2 bg-primary rounded-full shadow-neon-purple hidden md:block" 
+      />
+      <motion.div 
+        animate={{ y: [0, 30, 0], opacity: [0.3, 0.8, 0.3] }} 
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }} 
+        className="absolute bottom-1/4 right-10 w-2 h-2 bg-secondary rounded-full shadow-neon-blue hidden md:block" 
+      />
+
+      <div className="w-full max-w-4xl z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative rounded-2xl overflow-hidden bg-glass-bg backdrop-blur-xl border border-glass-border shadow-glass hover:border-primary/30 transition-colors duration-500"
         >
-          {certificates.map((cert, index) => (
-            <motion.div
-              key={index}
-              className={`
-                min-w-[300px] md:min-w-[350px] p-6 md:p-8 rounded-2xl flex flex-col
-                bg-glass-bg backdrop-blur-xl border border-glass-border shadow-glass
-                transition-all duration-300 hover:-translate-y-2
-                ${cert.color === 'primary' ? 'hover:shadow-neon-purple hover:border-primary/50' : 'hover:shadow-neon-blue hover:border-secondary/50'}
-              `}
-            >
-              {/* Premium Icon Header */}
-              <div className="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
-                <FaCertificate className={`text-3xl ${cert.color === 'primary' ? 'text-primary' : 'text-secondary'}`} />
-                <span className="text-xs font-mono text-gray-400 bg-white/5 px-3 py-1 rounded-full border border-white/10">
-                  {cert.date}
-                </span>
-              </div>
-              
-              {/* Title & Issuer */}
-              <h4 className="font-heading text-xl font-bold text-white mb-2 leading-tight">
-                {cert.title}
-              </h4>
-              <p className="font-body text-gray-400 text-sm mb-8 flex-grow">
-                Issued by <span className="text-gray-300 font-medium">{cert.issuer}</span>
-              </p>
-              
-              {/* Verification Button */}
-              <a 
-                href={cert.link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={`
-                  inline-flex items-center justify-center gap-2 w-full py-3 rounded-xl font-heading text-sm font-medium transition-all duration-300
-                  ${cert.color === 'primary' ? 'bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 hover:shadow-neon-purple' : 'bg-secondary/10 text-secondary border border-secondary/30 hover:bg-secondary/20 hover:shadow-neon-blue'}
-                `}
-              >
-                Verify Credential <FaExternalLinkAlt className="text-xs" />
-              </a>
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.div>
-      
-      {/* Scroll Hint */}
-      <div className="mt-8 text-center text-gray-500 font-mono text-xs uppercase tracking-widest hidden md:block">
-        &lt; Drag to explore &gt;
-      </div>
+          {/* Mac/Terminal Header UI - Clean Version */}
+          <div className="flex items-center px-6 py-4 bg-black/60 border-b border-white/5">
+            <div className="flex space-x-2">
+              <div className="w-3 h-3 rounded-full bg-red-500/80" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
+              <div className="w-3 h-3 rounded-full bg-green-500/80" />
+            </div>
+          </div>
 
+          {/* Terminal Body Content */}
+          <div className="p-8 md:p-12 font-body text-gray-300 space-y-6">
+            <div className="flex items-start gap-4">
+              <span className="text-secondary mt-1 font-mono">❯</span>
+              <p className="text-lg md:text-xl leading-relaxed">
+                <span className="text-primary-glow font-semibold text-white tracking-wide">Initialize AI_Engineer.exe...</span>
+                <br /><br />
+                I am an <span className="text-white font-medium">AI Engineer and Full Stack Developer</span> obsessed with building the future. My expertise lies at the intersection of scalable web architectures and intelligent systems, specifically focusing on <span className="text-secondary-glow text-white font-medium">Agentic AI</span> and modern LLM integrations.
+              </p>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <span className="text-secondary mt-1 font-mono">❯</span>
+              <p className="text-lg md:text-xl leading-relaxed">
+                Whether it is architecting high-performance backends, designing immersive glassmorphism UIs, or deploying autonomous AI agents, I build systems that don't just function—they <span className="italic text-white">think</span> and <span className="italic text-white">adapt</span>.
+              </p>
+            </div>
+
+            {/* Blinking Cursor */}
+            <div className="flex items-center gap-4 animate-pulse pt-2">
+              <span className="text-primary font-mono">❯</span>
+              <span className="w-3 h-6 bg-primary/80 block rounded-sm shadow-neon-purple" />
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }

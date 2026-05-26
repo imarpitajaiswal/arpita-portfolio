@@ -48,7 +48,7 @@ export default function Projects() {
         </h3>
       </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-8 z-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:gap-8 z-10">
         {projects.map((project, index) => (
           <motion.div
             key={index}
@@ -64,7 +64,7 @@ export default function Projects() {
             `}
           >
             {/* Cyberpunk Gradient Image Placeholder */}
-            <div className="relative w-full h-56 md:h-64 overflow-hidden">
+            <div className="relative w-full h-48 md:h-52 overflow-hidden">
               <div className={`absolute inset-0 opacity-80 transition-transform duration-700 group-hover:scale-110 ${
                 project.color === 'primary' 
                   ? 'bg-gradient-to-br from-[#050816] via-primary/40 to-[#050816]' 
