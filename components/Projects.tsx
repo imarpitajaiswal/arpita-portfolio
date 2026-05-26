@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaDatabase, FaBrain, FaFileAlt, FaServer, FaChartLine, FaCogs } from 'react-icons/fa';
 
 const projects = [
   {
@@ -10,6 +10,28 @@ const projects = [
     tech: ["Python", "Vector DB", "LLMs", "LangChain"],
     github: "https://github.com/imarpitajaiswal/DocuMind",
     live: "https://github.com/imarpitajaiswal/DocuMind",
+    Visual: () => (
+      <div className="flex items-center justify-center w-full h-full gap-2 text-gray-500">
+        <div className="flex flex-col items-center gap-1 z-10">
+          <div className="w-8 h-8 rounded-md bg-white/5 border border-white/10 flex items-center justify-center"><FaFileAlt /></div>
+          <span className="text-[9px] font-mono uppercase tracking-widest">Docs</span>
+        </div>
+        <div className="w-8 h-[1px] border-t border-dashed border-gray-600 relative">
+           <motion.div animate={{ x: [0, 32] }} transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }} className="absolute -top-[2px] left-0 w-1 h-1 rounded-full bg-gray-300" />
+        </div>
+        <div className="flex flex-col items-center gap-1 z-10">
+          <div className="w-8 h-8 rounded-md bg-white/5 border border-white/10 flex items-center justify-center"><FaDatabase /></div>
+          <span className="text-[9px] font-mono uppercase tracking-widest">Vector</span>
+        </div>
+        <div className="w-8 h-[1px] border-t border-dashed border-gray-600 relative">
+           <motion.div animate={{ x: [0, 32] }} transition={{ repeat: Infinity, duration: 1.5, ease: "linear", delay: 0.5 }} className="absolute -top-[2px] left-0 w-1 h-1 rounded-full bg-gray-300" />
+        </div>
+        <div className="flex flex-col items-center gap-1 z-10">
+          <div className="w-8 h-8 rounded-md bg-white/5 border border-white/10 flex items-center justify-center"><FaBrain /></div>
+          <span className="text-[9px] font-mono uppercase tracking-widest">LLM</span>
+        </div>
+      </div>
+    )
   },
   {
     title: "SkillMatch-AI",
@@ -17,6 +39,28 @@ const projects = [
     tech: ["Machine Learning", "NLP", "Python", "Scikit-Learn"],
     github: "https://github.com/imarpitajaiswal/SkillMatch-AI",
     live: "https://github.com/imarpitajaiswal/SkillMatch-AI",
+    Visual: () => (
+      <div className="flex items-center justify-center w-full h-full gap-3 text-gray-500">
+        <div className="flex flex-col gap-2 z-10">
+          <div className="w-6 h-6 rounded bg-white/5 border border-white/10 flex items-center justify-center text-[10px]"><FaFileAlt /></div>
+          <div className="w-6 h-6 rounded bg-white/5 border border-white/10 flex items-center justify-center text-[10px]"><FaFileAlt /></div>
+        </div>
+        <div className="w-6 h-[1px] border-t border-dashed border-gray-600 relative">
+           <motion.div animate={{ x: [0, 24] }} transition={{ repeat: Infinity, duration: 1.2, ease: "linear" }} className="absolute -top-[2px] left-0 w-1 h-1 rounded-full bg-gray-300" />
+        </div>
+        <div className="flex flex-col items-center gap-1 z-10">
+          <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center"><FaCogs className="animate-[spin_4s_linear_infinite]" /></div>
+          <span className="text-[9px] font-mono uppercase tracking-widest">TF-IDF</span>
+        </div>
+        <div className="w-6 h-[1px] border-t border-dashed border-gray-600 relative">
+           <motion.div animate={{ x: [0, 24] }} transition={{ repeat: Infinity, duration: 1.2, ease: "linear", delay: 0.6 }} className="absolute -top-[2px] left-0 w-1 h-1 rounded-full bg-gray-300" />
+        </div>
+        <div className="flex flex-col items-center gap-1 z-10">
+          <div className="w-8 h-8 rounded-md bg-white/5 border border-white/10 flex items-center justify-center font-mono text-xs text-white">0.92</div>
+          <span className="text-[9px] font-mono uppercase tracking-widest">Score</span>
+        </div>
+      </div>
+    )
   },
   {
     title: "Smart-Expense-Tracker",
@@ -24,6 +68,28 @@ const projects = [
     tech: ["Next.js", "React", "Node.js", "PostgreSQL"],
     github: "https://github.com/imarpitajaiswal/Smart-Expense-Tracker",
     live: "https://github.com/imarpitajaiswal/Smart-Expense-Tracker",
+    Visual: () => (
+      <div className="flex items-center justify-center w-full h-full gap-2 text-gray-500">
+        <div className="flex flex-col items-center gap-1 z-10">
+          <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center"><span className="text-xs text-white">$</span></div>
+          <span className="text-[9px] font-mono uppercase tracking-widest">Input</span>
+        </div>
+        <div className="w-8 h-[1px] border-t border-dashed border-gray-600 relative">
+           <motion.div animate={{ x: [0, 32] }} transition={{ repeat: Infinity, duration: 1, ease: "linear" }} className="absolute -top-[2px] left-0 w-1 h-1 rounded-full bg-gray-300" />
+        </div>
+        <div className="flex flex-col items-center gap-1 z-10">
+          <div className="w-8 h-8 rounded-md bg-white/5 border border-white/10 flex items-center justify-center"><FaServer /></div>
+          <span className="text-[9px] font-mono uppercase tracking-widest">API</span>
+        </div>
+        <div className="w-8 h-[1px] border-t border-dashed border-gray-600 relative">
+           <motion.div animate={{ x: [0, 32] }} transition={{ repeat: Infinity, duration: 1, ease: "linear", delay: 0.5 }} className="absolute -top-[2px] left-0 w-1 h-1 rounded-full bg-gray-300" />
+        </div>
+        <div className="flex flex-col items-center gap-1 z-10">
+          <div className="w-8 h-8 rounded-md bg-white/5 border border-white/10 flex items-center justify-center text-white"><FaChartLine /></div>
+          <span className="text-[9px] font-mono uppercase tracking-widest">UI</span>
+        </div>
+      </div>
+    )
   }
 ];
 
@@ -56,20 +122,13 @@ export default function Projects() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="group flex flex-col h-full bg-[#0A0A0A] border border-white/10 rounded-xl overflow-hidden hover:border-white/20 transition-colors duration-300"
           >
-            {/* Vercel-style Minimalist Header / Diagram Area */}
+            {/* Real Architecture Diagram Header */}
             <div className="relative w-full h-48 bg-[#111111] border-b border-white/5 overflow-hidden flex items-center justify-center">
-               {/* Subtle Dot Grid Background */}
-              <div className="absolute inset-0 bg-[radial-gradient(#ffffff22_1px,transparent_1px)] [background-size:16px_16px] opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
-              
-              {/* Abstract Tech Iconography based on title */}
-              <div className="z-10 w-12 h-12 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm group-hover:scale-105 transition-transform duration-500">
-                <span className="font-mono text-gray-400 text-sm">
-                  {project.title.substring(0, 2).toUpperCase()}
-                </span>
-              </div>
+              <div className="absolute inset-0 bg-[radial-gradient(#ffffff22_1px,transparent_1px)] [background-size:16px_16px] opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
+              <project.Visual />
             </div>
 
-            {/* Content Container - Flex Grow ensures equal heights */}
+            {/* Content Container */}
             <div className="p-6 md:p-8 flex flex-col flex-grow">
               <h4 className="text-xl font-semibold text-white mb-3 tracking-tight">
                 {project.title}
@@ -78,7 +137,6 @@ export default function Projects() {
                 {project.description}
               </p>
               
-              {/* Tech Stack Tags */}
               <div className="flex flex-wrap gap-2 mb-8">
                 {project.tech.map((tech, i) => (
                   <span key={i} className="px-2.5 py-1 text-xs font-medium text-gray-400 bg-white/5 border border-white/5 rounded-md">
@@ -87,7 +145,6 @@ export default function Projects() {
                 ))}
               </div>
 
-              {/* Action Links - Anchored to bottom */}
               <div className="flex gap-5 mt-auto pt-5 border-t border-white/5">
                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-gray-400 hover:text-white transition-colors">
                   <FaGithub className="text-lg" /> Source
