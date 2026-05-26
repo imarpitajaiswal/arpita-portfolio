@@ -100,6 +100,7 @@ export default function Hero() {
                 src="/profile.png" 
                 alt="Arpita Jaiswal" 
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
                 priority
               />
