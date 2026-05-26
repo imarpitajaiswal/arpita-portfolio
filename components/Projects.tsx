@@ -5,9 +5,9 @@ import { FaGithub, FaExternalLinkAlt, FaDatabase, FaBrain, FaFileAlt, FaServer, 
 
 const projects = [
   {
-    title: "DocuMind (RAG Assistant)",
-    description: "An LLM-powered document query system utilizing advanced vector databases to strictly eliminate hallucinations and ensure precise document analysis.",
-    tech: ["Python", "Vector DB", "LLMs", "LangChain"],
+    title: "DocuMind (RAG Architecture)",
+    description: "Engineered a production-ready RAG pipeline utilizing FAISS indexing and semantic chunking. Implemented a cross-encoder re-ranking step to achieve high retrieval accuracy and mitigate LLM hallucinations on proprietary datasets.",
+    tech: ["Python", "FAISS", "LangChain", "OpenAI API"],
     github: "https://github.com/imarpitajaiswal/DocuMind",
     live: "https://github.com/imarpitajaiswal/DocuMind",
     Visual: () => (
@@ -34,9 +34,9 @@ const projects = [
     )
   },
   {
-    title: "SkillMatch-AI",
-    description: "A sophisticated resume analyzer utilizing TF-IDF and Cosine Similarity algorithms to optimize candidate alignment with specific job descriptions.",
-    tech: ["Machine Learning", "NLP", "Python", "Scikit-Learn"],
+    title: "SkillMatch-AI Engine",
+    description: "Developed a semantic NLP screening engine. Transitioned from legacy heuristics to dense vector embeddings (SentenceTransformers) with Cosine Similarity, significantly improving matching precision across edge-case job descriptions.",
+    tech: ["FastAPI", "Transformers", "Python", "Vector Math"],
     github: "https://github.com/imarpitajaiswal/SkillMatch-AI",
     live: "https://github.com/imarpitajaiswal/SkillMatch-AI",
     Visual: () => (
@@ -50,7 +50,7 @@ const projects = [
         </div>
         <div className="flex flex-col items-center gap-1 z-10">
           <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center"><FaCogs className="animate-[spin_4s_linear_infinite]" /></div>
-          <span className="text-[9px] font-mono uppercase tracking-widest">TF-IDF</span>
+          <span className="text-[9px] font-mono uppercase tracking-widest">Embed</span>
         </div>
         <div className="w-6 h-[1px] border-t border-dashed border-gray-600 relative">
            <motion.div animate={{ x: [0, 24] }} transition={{ repeat: Infinity, duration: 1.2, ease: "linear", delay: 0.6 }} className="absolute -top-[2px] left-0 w-1 h-1 rounded-full bg-gray-300" />
@@ -63,9 +63,9 @@ const projects = [
     )
   },
   {
-    title: "Smart-Expense-Tracker",
-    description: "A performance-optimized financial utility capable of processing 500+ monthly transactions while maintaining 99% data integrity and visualization.",
-    tech: ["Next.js", "React", "Node.js", "PostgreSQL"],
+    title: "Smart-Expense Pipeline",
+    description: "Architected a high-throughput financial data pipeline using Node.js asynchronous event loops. Optimized backend API response times to <50ms for concurrent transactional inserts and real-time dashboard aggregations.",
+    tech: ["Next.js", "Node.js", "PostgreSQL", "Redis"],
     github: "https://github.com/imarpitajaiswal/Smart-Expense-Tracker",
     live: "https://github.com/imarpitajaiswal/Smart-Expense-Tracker",
     Visual: () => (
