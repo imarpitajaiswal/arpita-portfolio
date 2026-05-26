@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+import type { Config } from "tailwindcss";
+
+const config: Config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -7,14 +8,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#050816',
+        background: '#050816', // Deep space navy/black
         foreground: '#F9FAFB',
         primary: {
-          DEFAULT: '#A855F7',
+          DEFAULT: '#A855F7', // Neon Purple
           glow: '#C084FC',
         },
         secondary: {
-          DEFAULT: '#3B82F6',
+          DEFAULT: '#3B82F6', // Neon Blue
           glow: '#60A5FA',
         },
         glass: {
@@ -35,3 +36,4 @@ export default {
   },
   plugins: [],
 };
+export default config;
