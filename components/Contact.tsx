@@ -78,7 +78,7 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <form action="https://api.web3forms.com/submit" method="POST" className="bg-glass-bg backdrop-blur-xl border border-glass-border shadow-glass rounded-2xl p-6 md:p-8 space-y-6">
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="hidden" name="access_key" value="21721925-b331-42b3-80f7-d927604c2ff5" />
             
             <div className="space-y-2">
               <label htmlFor="name" className="text-xs font-mono tracking-widest text-gray-400 uppercase">Name</label>
