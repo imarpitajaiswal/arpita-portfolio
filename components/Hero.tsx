@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 // @ts-ignore
 import Typewriter from 'typewriter-effect';
@@ -74,7 +75,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Right: Circular Futuristic Profile placeholder */}
+        {/* Right: Circular Futuristic Profile Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -95,7 +96,13 @@ export default function Hero() {
             
             {/* Image Container */}
             <div className="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden bg-background flex items-center justify-center shadow-neon-blue z-10">
-              <span className="text-gray-500 font-heading tracking-widest text-sm">[ IMAGE GOES HERE ]</span>
+              <Image 
+                src="/profile.png" 
+                alt="Arpita Jaiswal" 
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </motion.div>
