@@ -52,7 +52,7 @@ export default function About() {
             <div className="flex items-start gap-4">
               <span className="text-secondary mt-1 font-mono">❯</span>
               <p className="text-lg md:text-xl leading-relaxed">
-                Whether it is architecting high-performance backends, designing immersive glassmorphism UIs, or deploying autonomous AI agents, I build systems that don't just function—they <span className="italic text-white">think</span> and <span className="italic text-white">adapt</span>.
+                Whether I am architecting hallucination-free RAG pipelines, deploying autonomous AI agents, or building high-performance financial trackers, I don't just write code—I engineer solutions that <span className="italic text-white">think</span>, <span className="italic text-white">adapt</span>, and <span className="italic text-white">scale</span>
               </p>
             </div>
 

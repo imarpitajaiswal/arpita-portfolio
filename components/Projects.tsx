@@ -5,26 +5,26 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const projects = [
   {
-    title: "Agentic AI Orchestrator",
-    description: "An autonomous framework allowing multiple LLM agents to collaborate, plan, and execute complex workflows with advanced self-correction capabilities.",
-    tech: ["Python", "LangChain", "OpenAI API", "Vector DB"],
-    github: "https://github.com/imarpitajaiswal",
+    title: "DocuMind (RAG Assistant)",
+    description: "An LLM-powered document query system utilizing advanced vector databases to strictly eliminate hallucinations and ensure precise document analysis.",
+    tech: ["Python", "LangChain", "LLMs", "Vector DB"],
+    github: "https://github.com/imarpitajaiswal/DocuMind",
     live: "#",
     color: "primary"
   },
   {
-    title: "Neural Analytics Dashboard",
-    description: "A real-time full-stack analytics platform that processes complex datasets using machine learning models and visualizes the insights seamlessly.",
-    tech: ["Next.js", "React.js", "FastAPI", "AWS"],
-    github: "https://github.com/imarpitajaiswal",
+    title: "SkillMatch-AI",
+    description: "A sophisticated resume analyzer utilizing TF-IDF and Cosine Similarity algorithms to optimize candidate alignment with specific job descriptions.",
+    tech: ["Machine Learning", "NLP", "Python", "Scikit-Learn"],
+    github: "https://github.com/imarpitajaiswal/SkillMatch-AI",
     live: "#",
     color: "secondary"
   },
   {
-    title: "Enterprise RAG Pipeline",
-    description: "A highly scalable Retrieval-Augmented Generation system designed for querying massive proprietary document stores with sub-second latency.",
-    tech: ["Node.js", "Hugging Face", "SQL", "Docker"],
-    github: "https://github.com/imarpitajaiswal",
+    title: "Smart-Expense-Tracker",
+    description: "A performance-optimized financial utility capable of processing 500+ monthly transactions while maintaining 99% data integrity and visualization.",
+    tech: ["Next.js", "React", "Data Processing", "Node.js"],
+    github: "https://github.com/imarpitajaiswal/Smart-Expense-Tracker",
     live: "#",
     color: "primary"
   }

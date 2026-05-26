@@ -6,33 +6,33 @@ import { FaGraduationCap, FaBriefcase, FaTrophy, FaCode } from 'react-icons/fa';
 const timelineData = [
   {
     year: "2026 - Present",
-    title: "Senior AI Engineer",
-    organization: "Tech Innovators Inc.",
-    description: "Architecting autonomous Agentic AI workflows and integrating scalable LLM solutions for enterprise clients. Leading a team of ML engineers.",
+    title: "AI Engineer & Tech Speaker",
+    organization: "Professional Network",
+    description: "Architecting Agentic AI workflows and presenting on modern AI ecosystems at professional tech summits across Noida and the NCR region.",
     icon: FaBriefcase,
     color: "primary"
   },
   {
     year: "2024 - 2026",
-    title: "Full Stack Developer",
-    organization: "Quantum Data Systems",
-    description: "Built scalable web architectures using Next.js, Node.js, and AWS. Deployed machine learning models via highly optimized FastAPI microservices.",
+    title: "Full Stack AI Developer",
+    organization: "Independent Builder",
+    description: "Developed and deployed highly scalable solutions, including DocuMind and SkillMatch-AI, bridging the gap between machine learning and functional UIs.",
     icon: FaCode,
     color: "secondary"
   },
   {
-    year: "2024",
+    year: "2025",
     title: "Master of Computer Applications",
-    organization: "Institute of Technology",
+    organization: "Amity University",
     description: "Graduated with honors. Specialized in Artificial Intelligence, Data Structures, and Advanced Algorithm Design.",
     icon: FaGraduationCap,
     color: "primary"
   },
   {
     year: "2023",
-    title: "National AI Hackathon Winner",
-    organization: "AI for Good Initiative",
-    description: "Developed a predictive analytics model for renewable energy optimization, winning 1st place among 500+ competing teams.",
+    title: "Bachelor of Computer Applications & Mathematics",
+    organization: "University of Delhi",
+    description: "Achieved top departmental rankings and earned several awards throughout the program.",
     icon: FaTrophy,
     color: "secondary"
   }

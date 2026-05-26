@@ -5,31 +5,31 @@ import { FaCertificate, FaExternalLinkAlt } from 'react-icons/fa';
 
 const certificates = [
   {
-    title: "AWS Certified Machine Learning – Specialty",
-    issuer: "Amazon Web Services",
-    date: "Dec 2025",
-    link: "#",
+    title: "Discovering the autonomous enterprise",
+    issuer: "SAP Learning",
+    date: "May 2026",
+    link: "www.linkedin.com/in/imarpitajaiswal",
     color: "primary"
   },
   {
-    title: "Agentic AI & Advanced LLM Systems",
-    issuer: "DeepLearning.AI",
-    date: "Oct 2025",
-    link: "#",
+    title: "Advanced Machine Learning Specialization",
+    issuer: "Amity University",
+    date: "2025",
+    link: "www.linkedin.com/in/imarpitajaiswal",
     color: "secondary"
   },
   {
-    title: "Full Stack Engineer Path",
-    issuer: "Codecademy",
-    date: "Aug 2024",
-    link: "#",
+    title: "Agentic AI Foundations",
+    issuer: "Saumya Singh Academy",
+    date: "2024",
+    link: "www.linkedin.com/in/imarpitajaiswal",
     color: "primary"
   },
   {
-    title: "SAP Autonomous Enterprise Discoverer",
-    issuer: "SAP Learning",
-    date: "May 2026",
-    link: "#",
+    title: "Skill India Quiz Challenge Winner",
+    issuer: "Ministry of Skill Development & Entrepreneurship",
+    date: "2022",
+    link: "www.linkedin.com/in/imarpitajaiswal",
     color: "secondary"
   }
 ];
