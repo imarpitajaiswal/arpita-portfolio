@@ -2,21 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
-
-:root {
-  --bg: #0a0a0a;
-  --text: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #050816;
+    color: #F9FAFB;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
 }
 
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: 'Inter', sans-serif;
-  scroll-behavior: smooth;
-  line-height: 1.6;
+/* Custom Futuristic Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.6);
 }
 
-.accent-1 { border-left: 4px solid #FF5733; }
-.accent-2 { border-left: 4px solid #33FF57; }
-.accent-3 { border-left: 4px solid #3357FF; }
+/* Glowing text utilities */
+.text-glow-primary {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
+}
+.text-glow-secondary {
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+}
+
+/* Button hover animation */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
