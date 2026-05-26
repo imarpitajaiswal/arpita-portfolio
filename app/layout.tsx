@@ -1,20 +1,28 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const spaceGrotesk = Space_Grotesk({ 
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-});
+// Optimize font loading
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "Arpita Jaiswal | AI Engineer",
-  description: "Portfolio of Arpita Jaiswal, an AI Engineer and Full Stack Developer.",
+  description: "AI Engineer specializing in Agentic workflows, scalable LLM infrastructure, and high-performance web applications.",
+  keywords: ["AI Engineer", "Full Stack Developer", "Machine Learning", "Next.js", "Python", "Arpita Jaiswal"],
+  authors: [{ name: "Arpita Jaiswal" }],
+  openGraph: {
+    title: "Arpita Jaiswal | AI Engineer",
+    description: "Architecting Intelligent Systems and scalable LLM infrastructure.",
+    url: "https://arpita-portfolio-puce.vercel.app",
+    siteName: "Arpita Jaiswal Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arpita Jaiswal | AI Engineer",
+    description: "Architecting Intelligent Systems and scalable LLM infrastructure.",
+  },
 };
 
 export default function RootLayout({
@@ -23,11 +31,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.variable} ${spaceGrotesk.variable} font-body bg-background text-foreground antialiased selection:bg-primary/30 selection:text-white`}>
-        <main className="relative w-full flex flex-col items-center justify-center min-h-screen">
-          {children}
-        </main>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.variable} font-sans bg-[#050505] text-white antialiased selection:bg-white/20 selection:text-white`}>
+        {children}
       </body>
     </html>
   );
