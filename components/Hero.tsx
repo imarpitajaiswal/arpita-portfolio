@@ -2,100 +2,86 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-// @ts-ignore
-import Typewriter from 'typewriter-effect';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import NeonButton from './ui/NeonButton';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-6 md:px-12 overflow-hidden w-full max-w-7xl mx-auto">
+    <section className="relative min-h-[90vh] flex items-center justify-center pt-20 pb-16 px-6 md:px-12 overflow-hidden w-full max-w-7xl mx-auto">
       
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 blur-[120px] rounded-full pointer-events-none -z-10" />
+      {/* Extremely subtle background grid */}
+      <div className="absolute inset-0 bg-[radial-gradient(#ffffff11_1px,transparent_1px)] [background-size:24px_24px] opacity-30 pointer-events-none -z-10" />
 
-      <div className="grid md:grid-cols-2 gap-12 items-center w-full z-10">
+      <div className="grid md:grid-cols-2 gap-16 items-center w-full z-10">
         
         {/* Left: Introduction */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="space-y-6"
+          className="space-y-8"
         >
-          <h2 className="font-heading text-secondary text-sm md:text-lg font-medium tracking-widest uppercase">
-            // Welcome to the future
-          </h2>
-          <h1 className="font-heading text-5xl md:text-7xl font-bold text-foreground leading-tight">
-            Hi, I’m <span className="text-primary-glow animate-pulse">Arpita Jaiswal</span>
-          </h1>
-          
-          {/* Animated Typing Effect */}
-          <div className="font-body text-xl md:text-2xl text-gray-400 min-h-[60px] md:min-h-[40px]">
-            <Typewriter
-              options={{
-                strings: [
-                  'AI Engineer',
-                  'Full Stack Developer',
-                  'Agentic AI Enthusiast'
-                ],
-                autoStart: true,
-                loop: true,
-                deleteSpeed: 30,
-                delay: 60,
-                cursor: '|',
-                wrapperClassName: 'text-secondary-glow font-medium'
-              }}
-            />
+          <div className="space-y-4">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]">
+              Architecting <br className="hidden md:block" />
+              <span className="text-gray-400">Intelligent Systems.</span>
+            </h1>
+            
+            <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-lg font-body">
+              Hi, I’m Arpita Jaiswal. An AI Engineer specializing in Agentic workflows, scalable LLM infrastructure, and high-performance web applications.
+            </p>
           </div>
 
-          <div className="flex flex-wrap gap-4 pt-6">
-            <NeonButton variant="purple" href="/resume.pdf" download>Download Resume</NeonButton>
-            <NeonButton variant="blue" href="#projects">View Projects</NeonButton>
+          <div className="flex flex-wrap gap-4 pt-4">
+            {/* Primary CTA */}
+            <a 
+              href="#projects"
+              className="px-6 py-3 rounded-lg bg-white text-black font-semibold text-sm hover:bg-gray-200 transition-colors duration-300 flex items-center justify-center"
+            >
+              View Engineering Work
+            </a>
+            {/* Secondary CTA */}
+            <a 
+              href="/resume.pdf"
+              download
+              className="px-6 py-3 rounded-lg bg-transparent border border-white/20 text-white font-medium text-sm hover:bg-white/5 transition-colors duration-300 flex items-center justify-center"
+            >
+              Download Resume
+            </a>
           </div>
 
-          {/* Social Icons */}
-          <div className="flex gap-6 pt-8 text-2xl text-gray-500">
+          {/* Social Icons - Clean and Minimal */}
+          <div className="flex gap-6 pt-6 text-xl text-gray-500">
             {[
-              { icon: FaGithub, href: 'https://github.com/imarpitajaiswal', color: 'hover:text-white hover:drop-shadow-[0_0_10px_#ffffff]' },
-              { icon: FaLinkedin, href: 'https://www.linkedin.com/in/imarpitajaiswal', color: 'hover:text-[#0A66C2] hover:drop-shadow-[0_0_10px_#0A66C2]' },
-              { icon: FaEnvelope, href: 'mailto:jaiswalarpita222@gmail.com', color: 'hover:text-primary hover:drop-shadow-[0_0_10px_#A855F7]' },
+              { icon: FaGithub, href: 'https://github.com/imarpitajaiswal' },
+              { icon: FaLinkedin, href: 'https://www.linkedin.com/in/imarpitajaiswal' },
+              { icon: FaEnvelope, href: 'mailto:jaiswalarpita222@gmail.com' },
             ].map((social, i) => (
-              <motion.a
+              <a
                 key={i}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ y: -5 }}
-                className={`transition-colors duration-300 ${social.color}`}
+                className="hover:text-white transition-colors duration-300"
               >
                 <social.icon />
-              </motion.a>
+              </a>
             ))}
           </div>
         </motion.div>
 
-        {/* Right: Circular Futuristic Profile Image */}
+        {/* Right: Refined Profile Image */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
           className="flex justify-center md:justify-end relative"
         >
-          <div className="relative group w-72 h-72 md:w-96 md:h-96">
-            {/* Animated Glowing Ring */}
-            <motion.div
-              className="absolute -inset-4 rounded-full opacity-70 group-hover:opacity-100 transition-opacity duration-500"
-              style={{
-                background: 'linear-gradient(45deg, #A855F7, #3B82F6, #A855F7)',
-                filter: 'blur(20px)',
-              }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
-            />
+          <div className="relative w-64 h-64 md:w-80 md:h-80">
+            {/* Very subtle glow, not a neon ring */}
+            <div className="absolute -inset-4 rounded-full bg-white/5 blur-2xl pointer-events-none" />
             
             {/* Image Container */}
-            <div className="relative w-full h-full rounded-full border-2 border-white/10 overflow-hidden bg-background flex items-center justify-center shadow-neon-blue z-10">
+            <div className="relative w-full h-full rounded-full border border-white/10 overflow-hidden bg-[#0A0A0A] flex items-center justify-center z-10 grayscale hover:grayscale-0 transition-all duration-700">
               <Image 
                 src="/profile.png" 
                 alt="Arpita Jaiswal" 
