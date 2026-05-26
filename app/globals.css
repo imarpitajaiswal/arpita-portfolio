@@ -1,6 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050816;
+  --color-foreground: #F9FAFB;
+  
+  --color-primary: #A855F7;
+  --color-primary-glow: #C084FC;
+  
+  --color-secondary: #3B82F6;
+  --color-secondary-glow: #60A5FA;
+
+  --font-heading: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  --shadow-neon-purple: 0 0 15px 2px rgba(168, 85, 247, 0.4);
+  --shadow-neon-blue: 0 0 15px 2px rgba(59, 130, 246, 0.4);
+  --shadow-glass: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
 
 @layer base {
   html {
